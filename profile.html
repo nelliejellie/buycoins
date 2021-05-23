@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="buycoins assignment">
+    <title>Profile</title>
+    <link rel="icon" href="img/github.jfif" type="image/icon type">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="icons/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- the menu -->
+    <div id="menu-div">
+        <i class="fab fa-github-square" ></i>
+        <input type="text" id="menu_prof_input" placeholder="Search or jump to....">
+        <span class="span_input first">Pull Request</span>
+        <span class="span_input">Issues</span>
+        <span class="span_input">Codespaces</span">
+        <span class="span_input">Marketplaces</span">
+        <span class="span_input">Explore</span">
+        <i class="fas fa-bell menu_image two" style="color: white;margin-left: 31%;position: absolute;margin-top: 15px;"></i>
+    </div>
+    <div id="menu-div-small">
+        <i class="fas fa-bars menu_image one"></i>
+        <i class="fab fa-github menu_image" ></i>
+        <i class="fas fa-bell menu_image two"></i>       
+    </div>
+    <div class="sub_menu">
+        <div class="sub"><input type="text" class="sub_input" placeholder="Search or jump to..."></div>
+        <div class="sub">Dashboard</div>
+        <div class="sub">Pull requests</div>
+        <div class="sub">Issues</div>
+        <div class="sub">Marketplace</div>
+        <div class="sub">Explore</div>
+        <div class="sub">Codespaces</div>
+        <div class="sub">Sponsor</div>
+        <div class="sub">Settings</div>
+        <div class="sub">Sign out</div>
+    </div>
+    <!-- end of the menu -->
+    <div id="body-div">
+        <!-- the body where the profile picture is located -->
+        <div class="image-part">
+            <div >
+                <img src="" alt="" id="img" class="profile_img">
+            </div>
+            <div>
+                <p id="name" class="names" style="margin-bottom: 0;">
+                </p>
+                <p id="name" class="nickname" style="margin-top: 0;">
+                    
+                </p>
+                <p class="bio" style="font-size: 300px;">
+                    
+                </p>
+            </div>
+        </div>
+        <!-- the body where the repository is -->
+        <div class="repo-part">
+            <div class="repo_menu_div">
+                <div>
+                    <span class="repo_menu"><i class="fas fa-book-open"></i> Overview</span>
+                </div>
+                <div>
+                    <span class="repo_menu not_first second"><i class="fas fa-folder-minus"></i> Repositories <span class="repo_count">20</span> </span>
+                </div>
+                <div>
+                    <span class="repo_menu not_first"><i class="fas fa-tasks"></i>  Projects</span>
+                </div>
+                <div>
+                    <span class="repo_menu not_first"><i class="fas fa-cube"></i>  Packages</span>
+                </div>
+            </div>
+            <div>
+                <input type="text" class="repo_search_input" placeholder="Find a repository...">
+            </div>
+            <div>
+                <p class='results_answer'>20 results for repositories</p>
+            </div>
+            <div class="control_div">
+                <div class="repo_part" id="demo">
+                    <!-- <div class="repo_first_part">
+                        <div><a href="" class="repo_name">iredokun.com</a></div>
+                        <div><button class="repo_star"><i class="far fa-star starman"></i>Star</button></div>
+                    </div>
+                    <div class="repo_second_part">
+                        <div class="underlings"><i class="fas fa-circle" ></i> HTML</div>
+                        <div class="underlings emotion"><i class="far fa-star" id="starman"></i> 20</div>
+                        <div class="underlings emotion"> commits 9</div>
+                        <div class="underlings emotion">Updated on 9 oct</div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- <div id="demo"></div> -->
+    
+    <script src="js/scripttest.js"></script>
+    <script>
+        const nickname = document.querySelector('.nickname');
+        nickname.innerHTML = userObj.login
+        
+        const bio = document.querySelector('.bio');
+        if(bio === null){
+            bio.innerHTML = ''
+        }else{
+            bio.innerHTML = userObj.bio
+        }
+
+        // set the toggle variable to false
+        let open = false
+        // get access to the menu image button
+        const menuButton = document.querySelector('.menu_image');
+        // get access to the hidden menu
+        const subMenuDiv = document.querySelector('.sub_menu');
+
+        // function to toggle off and on
+        menuButton.onclick = function(){
+            open = !open
+            if (open){
+                subMenuDiv.style.display = 'flex'
+            }else{
+                subMenuDiv.style.display = 'none'
+            }
+
+        }
+    </script>
+</body>
+</html>

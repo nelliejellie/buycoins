@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="buycoins assignment">
+    <title>Github clone</title>
+    <link rel="icon" href="img/github.jfif" type="image/icon type">
+    <script type='module' src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="icons/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- the menu part -->
+    <div id="menu-div">
+        <i class="fab fa-github-square" ></i>
+        <img src="" alt="" id="menu_prof_img">
+        <input type="text" id="menu_prof_input" placeholder="Search or jump to....">
+        <span class="span_input first">Pull Request</span>
+        <span class="span_input">Issues</span>
+        <span class="span_input">Codespaces</span">
+        <span class="span_input">Marketplaces</span">
+        <span class="span_input">Explore</span">
+        <i class="fas fa-bell menu_image two" style="color: white;margin-left: 31%;position: absolute;margin-top: 15px;"></i>
+    </div>
+    <div id="menu-div-small">
+        <i class="fas fa-bars menu_image one"></i>
+        <i class="fab fa-github menu_image" ></i>
+        <i class="fas fa-bell menu_image two"></i>        
+    </div>
+    <div class="sub_menu">
+        <div class="sub"><input type="text" class="sub_input" placeholder="Search or jump to..."></div>
+        <div class="sub">Dashboard</div>
+        <div class="sub">Pull requests</div>
+        <div class="sub">Issues</div>
+        <div class="sub">Marketplace</div>
+        <div class="sub">Explore</div>
+        <div class="sub">Codespaces</div>
+        <div class="sub">Sponsor</div>
+        <div class="sub">Settings</div>
+        <div class="sub">Sign out</div>
+    </div>
+    <!-- end of the menu -->
+    <div id="search-div">
+        <form action="">
+            <input type="text" id="input" placeholder="github username">
+            <input type="submit" value="Load Data" id="submit" >
+        </form>
+    </div>
+    <script>
+        // set the toggle variable to false
+        let open = false
+        // get access to the menu image button
+        const menuButton = document.querySelector('.menu_image');
+        // get access to the hidden menu
+        const subMenuDiv = document.querySelector('.sub_menu');
+
+        // function to toggle off and on
+        menuButton.onclick = function(){
+            open = !open
+            if (open){
+                subMenuDiv.style.display = 'flex'
+            }else{
+                subMenuDiv.style.display = 'none'
+            }
+
+        }
+    </script>
+</body>
+</html>
