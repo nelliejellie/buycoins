@@ -1,6 +1,6 @@
 // Using HTML modules, we'll import this project:
 // https://github.com/octokit/graphql.js/
-import {graphql} from 'https://cdn.pika.dev/@octokit/graphql'
+import { graphql } from "https://cdn.skypack.dev/@octokit/graphql";
 
 // get the value of the input
 var getSubmitButton = document.querySelector('#submit');
@@ -35,7 +35,7 @@ getSubmitButton.onclick = function(event){
   `
 
     // the github tokem
-  const token = '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'
+  const token = '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'
   const auth = {
       headers: {
           authorization: 'token ' + token
